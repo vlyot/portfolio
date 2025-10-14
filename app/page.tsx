@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useLayoutEffect, useRef, useState } from "react"
 
 export default function Home() {
   const [isDark, setIsDark] = useState(true)
@@ -12,7 +12,7 @@ export default function Home() {
     document.documentElement.classList.toggle("dark", isDark)
   }, [isDark])
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
