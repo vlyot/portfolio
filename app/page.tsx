@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react"
 export default function Home() {
   const [isDark, setIsDark] = useState(true)
   const [activeSection, setActiveSection] = useState("")
-  const sectionsRef = useRef<(HTMLElement | null)[]>([])
+  const sectionsRef = useRef<(HTMLElement | null)[]>([null, null, null])
 
   useEffect(() => {
     document.documentElement.classList.toggle("dark", isDark)
@@ -22,7 +22,7 @@ export default function Home() {
           }
         })
       },
-      { threshold: 0.3, rootMargin: "0px 0px -20% 0px" },
+      { threshold: 0.1, rootMargin: "0px 0px -5% 0px" },
     )
 
     sectionsRef.current.forEach((section) => {
@@ -56,7 +56,7 @@ export default function Home() {
       <main className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-16">
         <header
           id="intro"
-          ref={(el) => (sectionsRef.current[0] = el)}
+          ref={(el) => { sectionsRef.current[0] = el; }}
           className="min-h-screen flex items-center opacity-0"
         >
           <div className="grid lg:grid-cols-5 gap-12 sm:gap-16 w-full">
@@ -118,7 +118,7 @@ export default function Home() {
 
         <section
           id="work"
-          ref={(el) => (sectionsRef.current[1] = el)}
+          ref={(el) => { sectionsRef.current[1] = el; }}
           className="min-h-screen py-20 sm:py-32 opacity-0"
         >
           <div className="space-y-12 sm:space-y-16">
@@ -179,14 +179,14 @@ export default function Home() {
                   year: "2025",
                   role: "Adurite Tracker",
                   company: "Personal Project",
-                  description: "Adurite Tracker: A tracker for in-game items on adurite.com — captures item info (rate, projected status) not provided by the site. Appends extra info from external APIs.",
+                  description: `Adurite Tracker: A tracker for in-game items on adurite.com — captures item info (rate, projected status) not provided by the site. Appends extra info from external APIs.\n\nGitHub: https://github.com/vlyot/adurite-tracker`,
                   tech: ["TypeScript", "Rust", "React", "Tauri"] 
                 },
                 {
                   year: "2025",
                   role: "uqe-marketplace",
                   company: "Personal Project",
-                  description: "An extension of adurite-tracker. Customers can browse items and view the probable prices before contacting me. captures item info (rate, projected status) not provided by the site. Appends extra info from external APIs. Does some logic to display probable prices and their rates.",
+                  description: `An extension of adurite-tracker. Customers can browse items and view the probable prices before contacting me. captures item info (rate, projected status) not provided by the site. Appends extra info from external APIs. Does some logic to display probable prices and their rates.\n\nLink: https://vlyot.github.io/uqe-marketplace/`,
                   tech: ["Tailwind CSS", "Render", "React","TypeScript"] 
                 },
                 {
@@ -245,7 +245,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="connect" ref={(el) => (sectionsRef.current[3] = el)} className="py-20 sm:py-32 opacity-0">
+  <section id="connect" ref={(el) => { sectionsRef.current[2] = el; }} className="py-20 sm:py-32 opacity-0">
           <div className="grid lg:grid-cols-2 gap-12 sm:gap-16">
             <div className="space-y-6 sm:space-y-8">
               <h2 className="text-3xl sm:text-4xl font-light">Let's Connect</h2>
