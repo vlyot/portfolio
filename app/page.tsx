@@ -183,6 +183,13 @@ export default function Home() {
                   tech: ["TypeScript", "Rust", "React", "Tauri"] 
                 },
                 {
+                  year: "2025",
+                  role: "uqe-marketplace",
+                  company: "Personal Project",
+                  description: "An extension of adurite-tracker. Customers can browse items and view the probable prices before contacting me. captures item info (rate, projected status) not provided by the site. Appends extra info from external APIs. Does some logic to display probable prices and their rates.",
+                  tech: ["Tailwind CSS", "Render", "React","TypeScript"] 
+                },
+                {
                   year: "2024",
                   role: "Data Structures & Algorithms Practicals",
                   company: "Personal / Education",
@@ -201,7 +208,7 @@ export default function Home() {
                   role: "Learner",
                   company: "Duke University & Other Institutions",
                   description: "Various certifications in software engineering, programming, and computer science. Always updating and expanding my knowledge. Full list available on LinkedIn. (https://www.linkedin.com/in/kaichongng/details/certifications/)",
-                  tech: ["Java", "Python", "Computer Science", "Data Structures","NLP", "LLM", "AI"]
+                  tech: ["Java", "Python","Golang", "Computer Science", "Data Structures","NLP", "LLM", "AI"]
                 }
                 ].map((job, index) => (
                 <div
