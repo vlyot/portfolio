@@ -174,6 +174,12 @@ export default function Home() {
                   company: "Amazon",
                   description: "Gained essential software development skills, Java programming, data structures, algorithms, and full-stack web development using Java technologies.",
                   tech: ["Java", "Full-Stack Web Development", "SQL","Object Oriented Design","Relational Databases"],
+                },                {
+                  year: "2025",
+                  role: "Programming in Golang Certification",
+                  company: "UC Irvine",
+                  description: "Golang: Learned Go syntax, data structures, some concurrency, error handling, and web development to build efficient applications.",
+                  tech: ["Golang","Concurrency","Error Handling"],
                 },
                 {
                   year: "2025",
